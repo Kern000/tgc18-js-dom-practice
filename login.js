@@ -12,19 +12,19 @@ async function main() {
         echo:"*"
     });
     try {
-        let response = await axios.post(BASE_API_URL + "api/users/login", {
-            email, password
-        })
-        let configTemplate = `
-        let user = {
-            'email': '${email}',
-            'jwt': '${response.data.accessToken}'
-        }
+        // let response = await axios.post(BASE_API_URL + "api/users/login", {
+        //     email, password
+        // })
+        // let configTemplate = `
+        // let user = {
+        //     'email': '${email}',
+        //     'jwt': '${response.data.accessToken}'
+        // }
         
-        module.exports = user;
-                `
-        fs.writeFileSync('user.js', configTemplate);
-        console.log("Setup done! Please log in reguarly!");
+        // module.exports = user;
+        //         `
+        // fs.writeFileSync('user.js', configTemplate);
+        // console.log("Setup done! Please log in reguarly!");
 
     } catch (e) {
         console.log("Error logging in");

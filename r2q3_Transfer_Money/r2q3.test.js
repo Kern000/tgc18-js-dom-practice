@@ -55,10 +55,10 @@ it("transfer money to wallet button works by decreasing account and increasing w
   const transfer10ToWalletBtn = document.querySelector("#transfer10ToWallet");
   expect(transfer10ToWalletBtn).not.toBe(null);
   // check balances before click
-  const wallet = document.querySelector("#other-wallet");
-  const walletBalanceB4Click = parseInt(wallet.innerHTML);
-  const account = document.querySelector("#account");
-  const accountBalanceB4Click = parseInt(account.innerHTML);
+  wallet = document.querySelector("#other-wallet");
+  walletBalanceB4Click = parseInt(wallet.innerHTML);
+  account = document.querySelector("#account");
+  accountBalanceB4Click = parseInt(account.innerHTML);
   //Create a click event with optional event initialisers: bubbles, cancelable and composed
   const evt = new Event("click", {
     bubbles: false,

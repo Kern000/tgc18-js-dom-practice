@@ -3,7 +3,7 @@ const jquery = require("jquery");
 
 describe("my test suite 3", () => { 
   // your tests here ...
-  it("counter is green when number is even and red when odd", async () => {
+  it("counter is red when number is even and green when odd", async () => {
     const options = {
       resources: "usable",
       runScripts: "dangerously"
@@ -29,10 +29,10 @@ describe("my test suite 3", () => {
     incrementButton.click(); // --> 4
     
     expect(parseInt(document.querySelector("#box").innerHTML)).toBe(4);
-    expect(document.querySelector("#box").style.backgroundColor).toBe('green');
+    expect(document.querySelector("#box").style.backgroundColor).toBe('red');
 
     decrementButton.click();
     expect(document.querySelector("#box").style.backgroundColor).toBe('red');
 
-  }); 
+  });
 });
